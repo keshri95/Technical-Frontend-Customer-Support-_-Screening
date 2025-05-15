@@ -24,25 +24,20 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header {
+header {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.header h1 {
+header h1 {
   font-size: 20px;
   color: #FF6B82;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.header p {
-  font-size: 24px;
-  color: #ff6b82;
-  font-weight: bold;
-}
 
-.pricing-option {
+.pricing_option {
   padding: 15px;
   border: 1px solid rgba(200, 200, 200, 1);
   border-radius: 8px;
@@ -50,7 +45,8 @@ body {
   position: relative;
 }
 
-.pricing-option input[type="radio"] {
+
+.pricing_option input[type="radio"] {
   position: absolute;
   opacity: 0;
 }
@@ -60,7 +56,7 @@ body {
   align-items: flex-start;
 }
 
-.custom-radio {
+.custom_radio {
   width: 18px;
   height: 18px;
   border: 2px solid #ddd;
@@ -69,20 +65,20 @@ body {
   position: relative;
   flex-shrink: 0;
   margin-top: 3px;
-   transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
-.pricing-option
+.pricing_option
   input[type="radio"]:checked
   + .radio-container
-  .custom-radio {
+  .custom_radio {
   border-color: #ff6b82;
 }
 
-.pricing-option
+.pricing_option
   input[type="radio"]:checked
   + .radio-container
-  .custom-radio::after {
+  .custom_radio::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -93,42 +89,42 @@ body {
   left: 2px;
 }
 
-.pricing-content {
+.pricing_content {
   flex-grow: 1;
 }
 
-.pricing-header {
+.pricing_header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 10px;
 }
 
-.pricing-header-left {
+.pricing_header_left {
   display: flex;
   flex-direction: column;
 }
 
-.pricing-header label {
+.pricing_header label {
   font-size: 14px;
   font-weight: 600;
   color: #000000;
 }
 
-.pricing-header .price {
+.pricing_header .price {
   font-size: 16px;
   font-weight: bold;
   color: #000000;
 }
 
-.pricing-header .original-price  {
+.pricing_header .original_price  {
   font-size: 10px;
   color: #999;
   font-weight: 400;
   text-decoration: line-through;
 }
 
-.pricing-header-left .standard-price{
+.pricing_header_left .standard-price{
   font-size: 12px;
   color: #999;
   text-align: start;
@@ -167,23 +163,23 @@ body {
   display: none;
 }
 
-.pricing-option input[type="radio"]:checked ~ .options {
+.pricing_option input[type="radio"]:checked ~ .options {
   display: block;
 }
 
- .pricing-option input[type="radio"]:checked ~ .options {
+ .pricing_option input[type="radio"]:checked ~ .options {
     max-height: 500px;
     opacity: 1;
     transition: max-height 0.5s ease-in, opacity 0.3s ease 0.2s;
 }
 
-.option-row {
+.option_row {
   display: flex;
   margin-bottom: 10px;
   flex-direction: row;
 }
 
-.option-number {
+.option_number {
   width: 30px;
   font-size: 12px;
   font-weight: bold;
@@ -196,11 +192,11 @@ body {
   gap: 10px;
 }
 
-.select-container {
+.select_container {
   flex: 1;
 }
 
-.select-label {
+.select_label {
   font-size: 10px;
   color: #000000;
   margin-bottom: 3px;
@@ -215,7 +211,8 @@ select {
   color: #333;
 }
 
-.footer {
+
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -224,20 +221,20 @@ select {
   border-top: 1px solid #eee;
 }
 
-.footer .delivery {
+footer .delivery {
   font-size: 14px;
   color: rgba(255, 107, 130, 1);
   font-weight: 500;
 }
 
-.footer .total {
+footer .total {
   font-size: 14px;
   font-weight: bold;
   color: rgba(0, 0, 0, 1);
 
 }
 
-.add-to-cart {
+.add_to_cart {
   background-color: rgba(255, 107, 130, 1);
   color: #fff;
   border: none;
@@ -251,9 +248,9 @@ select {
   gap: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.add-to-cart:hover {
-    background-color: #ff5a72;
-    transform: translateY(-2px);
+.add_to_cart:hover {
+  background-color: #ff5a72;
+  transform: translateY(-2px);
 }
 
 
