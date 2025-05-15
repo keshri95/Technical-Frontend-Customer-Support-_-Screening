@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #FF6B82;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 24px;
+  color: #ff6b82;
+  font-weight: bold;
+}
+
+.pricing-option {
+  padding: 15px;
+  border: 1px solid rgba(200, 200, 200, 1);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.pricing-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 3px;
+   transition: border-color 0.3s ease;
+}
+
+.pricing-option
+  input[type="radio"]:checked
+  + .radio-container
+  .custom-radio {
+  border-color: #ff6b82;
+}
+
+.pricing-option
+  input[type="radio"]:checked
+  + .radio-container
+  .custom-radio::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff6b82;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+
+.pricing-content {
+  flex-grow: 1;
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.pricing-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-header label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.pricing-header .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.pricing-header .original-price  {
+  font-size: 10px;
+  color: #999;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.pricing-header-left .standard-price{
+  font-size: 12px;
+  color: #999;
+  text-align: start;
+  margin: 2px 0;
+}
+
+.discount {
+  background-color: #ff6b82;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.popular {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: #FF6B82;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.popular-option {
+  border-color: #ff6b82;
+  background-color: #fff9fa;
+}
+
+.options {
+  margin-top: 15px;
+  display: none;
+}
+
+.pricing-option input[type="radio"]:checked ~ .options {
+  display: block;
+}
+
+ .pricing-option input[type="radio"]:checked ~ .options {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.3s ease 0.2s;
+}
+
+.option-row {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: row;
+}
+
+.option-number {
+  width: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+.option-selects {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.select-container {
+  flex: 1;
+}
+
+.select-label {
+  font-size: 10px;
+  color: #000000;
+  margin-bottom: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 0.9px solid rgba(217, 217, 217, 1);
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.footer .delivery {
+  font-size: 14px;
+  color: rgba(255, 107, 130, 1);
+  font-weight: 500;
+}
+
+.footer .total {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+
+}
+
+.add-to-cart {
+  background-color: rgba(255, 107, 130, 1);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.add-to-cart:hover {
+    background-color: #ff5a72;
+    transform: translateY(-2px);
+}
+
+
+.powered-by {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
+  text-align: right;
+  font-style: italic;
+}
